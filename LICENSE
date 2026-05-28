@@ -1,0 +1,22 @@
+Source-Available Portfolio License
+
+Copyright (c) 2026 Pau Gaspar
+
+This repository is provided for portfolio review, technical evaluation and educational reading only.
+
+You may:
+- read the code;
+- clone it locally for evaluation;
+- run the included synthetic demo data flow;
+- reference the architecture and documentation for non-commercial learning.
+
+You may not, without explicit written permission from the copyright holder:
+- use this code or substantial parts of it in a commercial product;
+- redistribute modified or unmodified copies as your own project;
+- deploy it as a production service;
+- use it to build a competing product or hosted service;
+- remove attribution or misrepresent authorship.
+
+This portfolio version intentionally excludes production deployment details, private datasets, external discovery strategies and production worker logic.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.

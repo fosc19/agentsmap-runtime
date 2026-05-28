@@ -1,0 +1,7 @@
+flowchart LR
+    seed[Synthetic demo resources] --> db[(PostgreSQL)]
+    demo[Demo activity worker] --> db
+    db --> api[Fastify API]
+    api --> sse[SSE/live endpoints]
+    api --> ops[Ops views]
+    api --> web[React/Vite network map]

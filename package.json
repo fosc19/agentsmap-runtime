@@ -1,0 +1,42 @@
+{
+  "name": "agentsmap-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Source-available portfolio demo for real-time observability of agent economic activity using Fastify, PostgreSQL and React network maps.",
+  "scripts": {
+    "build": "npm run build:ts && npm run build:web",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev:api": "tsx apps/api/src/server.ts",
+    "dev:web": "vite --config apps/web/vite.config.js",
+    "dev:worker": "tsx apps/worker/src/demo_activity_worker.ts",
+    "dev:stack": "bash scripts/dev_stack_local.sh",
+    "dev:stack:stop": "bash scripts/dev_stack_stop.sh",
+    "dev:stack:status": "bash scripts/dev_stack_status.sh",
+    "db:up": "docker compose -f infra/docker-compose.postgres.yml up -d",
+    "db:down": "docker compose -f infra/docker-compose.postgres.yml down",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "seed:demo": "tsx scripts/seed_demo_resources.ts data/demo/rows-demo.tsv",
+    "build:ts": "tsc -p tsconfig.json",
+    "build:web": "vite build --config apps/web/vite.config.js"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.0.8",
+    "@react-three/fiber": "^9.1.0",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.2.1",
+    "pg": "^8.14.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.174.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/pg": "^8.18.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0"
+  }
+}
